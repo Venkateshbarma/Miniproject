@@ -1,8 +1,6 @@
-# Supermarket Billing System (Compatible with Bytexl Nimbus)
-
 # Product class
 class Product:
-    def _init_(self, code, name, price, stock):
+    def __init__(self, code, name, price, stock):
         self.code = code  # unique identifier for the product
         self.name = name  # product name
         self.price = price  # price of the product
@@ -19,7 +17,7 @@ class Product:
 
 # Shopping Cart Class
 class Cart:
-    def _init_(self):
+    def __init__(self):
         self.items = {}  # dictionary to hold product code and quantity
 
     def add_to_cart(self, product, quantity):
@@ -47,7 +45,7 @@ class Cart:
 
 # Billing System
 class BillingSystem:
-    def _init_(self):
+    def __init__(self):
         self.products = []  # List to store all products
         self.cart = Cart()  # Cart object
 
@@ -149,5 +147,5 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
-if _name_ == "_main_":
-    main()
+if __name__ == "__main__":
+    main()
